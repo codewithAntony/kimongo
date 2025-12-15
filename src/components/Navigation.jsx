@@ -2,12 +2,12 @@ import React from 'react';
 
 const Navigation = () => {
     return (
-        <div>
-            <div>
-                <div>
-                    <h2>Kimong'o</h2>
+        <div className="mx-auto max-w-7xl">
+            <div className="flex justify-between">
+                <div className="">
+                    <h2 className="font-medium text-lg">Kimong'o</h2>
                 </div>
-                <div>
+                <div className="flex justify-between gap-4">
                     <span>Home</span>
                     <span>About</span>
                     <span>Services</span>
