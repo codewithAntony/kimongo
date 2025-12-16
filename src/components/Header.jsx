@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
+import SocialLinks from './SocialLinks';
 
 function Header() {
     const [text] = useTypewriter({
@@ -47,6 +48,10 @@ function Header() {
                         <button className="bg-gradient-to-l from-[#249C82] via-[#44D2B0] to-[#5CF3CF] text-white font-semibold px-6 py-2 rounded-lg shadow-lg transition-all hover:scale-105 hover:shadow-xl">
                             My Work
                         </button>
+                    </div>
+
+                    <div>
+                        <SocialLinks />
                     </div>
                 </motion.div>
 
