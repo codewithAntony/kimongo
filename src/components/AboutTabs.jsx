@@ -58,11 +58,11 @@ function AboutTabs() {
                         style={{ backgroundColor: 'var(--primary-color)' }}
                         className="w-24 h-0.5 mb-2 sm:h-1"
                     ></div>
-                    <p className="text-white">Hello</p>
-                    <p className="text-white mt-2">
+                    <p className="text-gray-400 ">Hello</p>
+                    <p className="text-gray-400  mt-2">
                         I am Antony Namu, Full Stack Developer.
                     </p>
-                    <p className="text-white mt-3">
+                    <p className="text-gray-400  mt-3">
                         Passionate and highly-skilled Full Stack Developer
                         withhands-on experience building wonderful projects.
                         With a strong attention to detail and accuracy and the
@@ -82,8 +82,10 @@ function AboutTabs() {
                         className="w-24 h-0.5 mb-2 sm:h-1"
                         style={{ backgroundColor: 'var(--primary-color)' }}
                     ></div>
-                    <p className="text-white ">I bring unique value through:</p>
-                    <ul className="list-disc list-inside mt-3 text-white space-y-2">
+                    <p className="text-gray-400  ">
+                        I bring unique value through:
+                    </p>
+                    <ul className="list-disc list-inside mt-3 text-gray-400  space-y-2">
                         <li>Strong problem-solving abilities</li>
                         <li>Deep expertise in modern web technologies</li>
                         <li>
@@ -107,11 +109,11 @@ function AboutTabs() {
                         className="w-24 h-0.5 mb-2 sm:h-1"
                         style={{ backgroundColor: 'var(--primary-color)' }}
                     ></div>
-                    <p className="text-white ">
+                    <p className="text-gray-400  ">
                         My vision is to create impactful digital experiences
                         that:
                     </p>
-                    <ul className="list-disc list-inside mt-3 text-white  space-y-2">
+                    <ul className="list-disc list-inside mt-3 text-gray-400   space-y-2">
                         <li>Transform user interactions</li>
                         <li>Push technological boundaries</li>
                         <li>Deliver exceptional value</li>
@@ -122,8 +124,8 @@ function AboutTabs() {
         }
     ];
     return (
-        <div className="h-screen max-w-6xl mx-auto px-4">
-            <div className="flex flex-col md:flex-row gap-12 items-center justify-center w-full">
+        <div className="max-w-6xl mx-auto px-4">
+            <div className="flex flex-col md:flex-row gap-6 items-center justify-center w-full">
                 <motion.div
                     variants={leftVariant}
                     initial="hidden"
@@ -150,7 +152,7 @@ function AboutTabs() {
                                 className={`px-6 py-2 font-medium text-sm transition-colors duration-200 ${
                                     activeTab === tab.id
                                         ? 'bg-[#081427] text-[#5CF3CF] border-w border-b-0 border-t border-l border-r border hover:text-gray-700 hover:border-b-0'
-                                        : ' text-white hover:text-gray-700 hover:bg-[#081427] border-b-0  border-t border-l border-r border hover:border hover:border-b-0'
+                                        : ' text-gray-400  hover:text-gray-700 hover:bg-[#081427] border-b-0  border-t border-l border-r border hover:border hover:border-b-0'
                                 }
                                 ${
                                     tab.id === 'ABOUT ME'
@@ -193,20 +195,20 @@ function AboutTabs() {
                     <div className="space-y-4">
                         <div className="flex flex-col sm:flex-row sm:gap-2">
                             <p className="font-medium text-[#5CF3CF]">Name:</p>
-                            <p className="text-white">Antony Namu</p>
+                            <p className="text-gray-400 ">Antony Namu</p>
                         </div>
                         <div className="flex flex-col sm:flex-row sm:gap-2">
                             <p className="font-medium text-[#5CF3CF]">
                                 Phone Number:
                             </p>
-                            <p className="text-white">07-25-010-898</p>
+                            <p className="text-gray-400 ">07-25-010-898</p>
                         </div>
                         <div className="flex flex-col sm:flex-row sm:gap-2">
                             <p className="font-medium text-[#5CF3CF]">Mail:</p>
                             <a
                                 href="mailto:murithi3397@gmail.com"
                                 onClick={handleEmailClick}
-                                className="text-white cursor-pointer"
+                                className="text-gray-400  cursor-pointer"
                             >
                                 murithinamuu@gmail.com
                             </a>
@@ -217,7 +219,7 @@ function AboutTabs() {
                             </p>
                             <a
                                 href="https://github.com/codewithAntony"
-                                className="text-white cursor-pointer"
+                                className="text-gray-400  cursor-pointer"
                             >
                                 https://github.com/codewithAntony
                             </a>
@@ -230,7 +232,7 @@ function AboutTabs() {
                                 href="/Antony_Namu_Resume.pdf"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-white cursor-pointer"
+                                className="text-gray-400  cursor-pointer"
                             >
                                 Antony Namu Resume
                             </a>
@@ -241,7 +243,7 @@ function AboutTabs() {
                             </p>
                             <a
                                 href="https://www.linkedin.com/in/antony-murithi-namu/"
-                                className="text-white cursor-pointer"
+                                className="text-gray-400  cursor-pointer"
                             >
                                 https://www.linkedin.com/in/antony-murithi-namu/
                             </a>
