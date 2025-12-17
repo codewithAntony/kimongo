@@ -1,6 +1,5 @@
 import React from 'react';
 import AboutTabs from './AboutTabs';
-import { div } from 'framer-motion/client';
 
 function About() {
     return (

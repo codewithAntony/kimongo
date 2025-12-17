@@ -1,5 +1,24 @@
 import React, { useState } from 'react';
 import emailjs from '@emailjs/browser';
+import { motion } from 'framer-motion';
+
+const leftVariant = {
+    hidden: { x: -150, opacity: 0 },
+    visible: {
+        x: 0,
+        opacity: 1,
+        transition: { duration: 0.8, ease: 'easeOut' }
+    }
+};
+
+const rightVariant = {
+    hidden: { x: 150, opacity: 0 },
+    visible: {
+        x: 0,
+        opacity: 1,
+        transition: { duration: 0.8, ease: 'easeOut' }
+    }
+};
 
 function AboutTabs() {
     const [activeTab, setActiveTab] = useState('ABOUT ME');
@@ -104,8 +123,14 @@ function AboutTabs() {
     ];
     return (
         <div className="h-screen max-w-6xl mx-auto px-4">
-            <div className="flex flex-col gap-8 md:flex-row">
-                <div className="flex-[2] animate-slide-in-left min-w-[280px] max-w-[280px] sm:min-w-[600px] sm:max-w-[600px]">
+            <div className="flex flex-col md:flex-row gap-12 items-center justify-center w-full">
+                <motion.div
+                    variants={leftVariant}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.4 }}
+                    className="flex-[2] animate-slide-in-left min-w-[280px] max-w-[280px] sm:min-w-[600px] sm:max-w-[600px]"
+                >
                     <div className="flex gap-1">
                         {tabs.map((tab) => (
                             <button
@@ -146,9 +171,15 @@ function AboutTabs() {
                     >
                         {tabs.find((tab) => tab.id === activeTab)?.content}
                     </div>
-                </div>
+                </motion.div>
 
-                <div className="flex-1 text-center animate-slide-in-right">
+                <motion.div
+                    variants={rightVariant}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.4 }}
+                    className="flex-1 text-center"
+                >
                     <div className="flex flex-col items-center justify-center">
                         <h3 className="text-xl text-[#5CF3CF] font-semibold mb-2">
                             PERSONAL INFO
@@ -186,7 +217,7 @@ function AboutTabs() {
                             </p>
                             <a
                                 href="https://github.com/codewithAntony"
-                                className="text-white cursor:pointer"
+                                className="text-white cursor-pointer"
                             >
                                 https://github.com/codewithAntony
                             </a>
@@ -199,7 +230,7 @@ function AboutTabs() {
                                 href="/Antony_Namu_Resume.pdf"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-white cursor:pointer"
+                                className="text-white cursor-pointer"
                             >
                                 Antony Namu Resume
                             </a>
@@ -210,13 +241,13 @@ function AboutTabs() {
                             </p>
                             <a
                                 href="https://www.linkedin.com/in/antony-murithi-namu/"
-                                className="text-white cursor:pointer"
+                                className="text-white cursor-pointer"
                             >
                                 https://www.linkedin.com/in/antony-murithi-namu/
                             </a>
                         </div>
                     </div>
-                </div>
+                </motion.div>
             </div>
         </div>
     );
