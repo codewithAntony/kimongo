@@ -4,7 +4,10 @@ import GetInTouch from './GetInTouch';
 
 function About() {
     return (
-        <div className="bg-[#081427] py-20 flex items-center justify-center">
+        <div
+            id="about"
+            className="bg-[#081427] py-20 flex items-center justify-center scroll-mt-24"
+        >
             <div
                 id="about"
                 className="w-full max-w-7xl px-4 flex flex-col items-center"

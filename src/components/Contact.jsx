@@ -14,7 +14,10 @@ import {
 
 const Contact = () => {
     return (
-        <div className="min-h-screen bg-[#0a192f] text-slate-300 p-8 flex flex-col relative overflow-hidden">
+        <div
+            id="contact"
+            className="min-h-screen bg-[#0a192f] text-slate-300 p-8 flex flex-col relative overflow-hidden scroll-mt-24"
+        >
             <style>
                 {`
                 @keyframes orbit {
@@ -32,7 +35,7 @@ const Contact = () => {
                 <div className="max-w-6xl w-full flex flex-col-reverse lg:flex-row items-center justify-between gap-16">
                     {/* Form Section */}
                     <div className="bg-[#112240] p-8 rounded-2xl shadow-xl w-full max-w-lg">
-                        <h2 className="text-3xl font-bold text-white text-center mb-2">
+                        <h2 className="text-3xl font-bold text-[#5CF3CF] text-center mb-2">
                             Contact Me
                         </h2>
                         <p className="text-center text-slate-400 mb-8">
@@ -68,7 +71,7 @@ const Contact = () => {
                             ></textarea>
                             <button
                                 type="submit"
-                                className="bg-[#64ffda] hover:bg-[#56d8b7] text-[#0a192f] font-bold py-3 px-6 rounded-lg transition-colors duration-300"
+                                className="bg-gradient-to-l from-[#249C82] via-[#44D2B0] to-[#5CF3CF] hover:bg-[#56d8b7] text-[#0a192f] font-bold py-3 px-6 rounded-lg transition-colors duration-300"
                             >
                                 Send Message
                             </button>

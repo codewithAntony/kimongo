@@ -73,7 +73,10 @@ const ProjectCard = ({ project }) => (
 
 const ProjectsStats = () => {
     return (
-        <section className="py-20 px-6 bg-[#081427] font-sans">
+        <section
+            id="services"
+            className="py-20 px-6 bg-[#081427] font-sans scroll-mt-24"
+        >
             <div className="max-w-6xl mx-auto text-center">
                 <h2 className="text-4xl md:text-5xl font-bold text-[#5CF3CF] mb-6">
                     Featured Projects
