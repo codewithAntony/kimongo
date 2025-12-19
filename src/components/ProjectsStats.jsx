@@ -7,21 +7,30 @@ const projects = [
         description:
             'This interactive music website leverages the Spotify API to provide users with a personalized music experience. Users can log in with their Spotify accounts to generate custom playlists based on their listening history, favorite genres, and mood preferences.',
         tags: ['Vuejs', 'Javascript', 'Spotify API'],
-        links: { github: '#', external: '#' }
+        links: {
+            github: 'https://github.com/codewithAntony/ngomazangu',
+            external: '#'
+        }
     },
     {
         title: 'Fitclub Gym',
         description:
             'Fitclub is a modern, user-friendly website designed for a local gym, offering seamless subscription management and an interactive location finder. The website allows users to explore gym memberships, sign up for subscriptions, and view the physical location of the gym on an embedded map.',
         tags: ['Reactjs', 'Javascript'],
-        links: { github: '#', external: '#' }
+        links: {
+            github: 'https://github.com/codewithAntony/gym-fitness-website',
+            external: '#'
+        }
     },
     {
         title: 'Moti Care Garage Service Management',
         description:
             'This project provides an Admin Dashboard to manage customers, employees, vehicles, services and orders making garage operations efficient and organized.',
         tags: ['Reactjs', 'Node.js', 'Express', 'mySQL'],
-        links: { github: '#', external: '#' }
+        links: {
+            github: 'https://github.com/codewithAntony/moticaree',
+            external: '#'
+        }
     }
 ];
 
@@ -38,17 +47,31 @@ const ProjectCard = ({ project }) => (
                     </span>
                 )}
                 <div className="flex gap-2 text-slate-400">
-                    {project.links.external && (
-                        <ExternalLink
-                            size={20}
-                            className="cursor-pointer hover:text-slate-600"
-                        />
+                    {!project.links.external && (
+                        <a
+                            href={project.links.external}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Live demo"
+                        >
+                            <ExternalLink
+                                size={20}
+                                className="opacity-40 cursor-not-allowed"
+                            />
+                        </a>
                     )}
                     {project.links.github && (
-                        <Github
-                            size={20}
-                            className="cursor-pointer hover:text-slate-600"
-                        />
+                        <a
+                            href={project.links.github}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Github repository"
+                        >
+                            <Github
+                                size={20}
+                                className="cursor-pointer hover:text-slate-600"
+                            />
+                        </a>
                     )}
                 </div>
             </div>

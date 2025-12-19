@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import {
     SiCss3,
     SiDocker,
@@ -11,8 +11,32 @@ import {
     SiTypescript,
     SiVuedotjs
 } from 'react-icons/si';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
+    const formRef = useRef();
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs
+            .sendForm(
+                import.meta.env.VITE_EMAILJS_SERVICE_ID,
+                import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+                formRef.current,
+                import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+            )
+            .then(
+                () => {
+                    alert('Message sent successfully');
+                    formRef.current.reset();
+                },
+                (error) => {
+                    console.error(error);
+                    alert('Failed to send message');
+                }
+            );
+    };
     return (
         <div
             id="contact"
@@ -41,30 +65,39 @@ const Contact = () => {
                         <p className="text-center text-slate-400 mb-8">
                             GET IN TOUCH WITH ME
                         </p>
-                        <form className="space-y-4">
+                        <form
+                            ref={formRef}
+                            onSubmit={sendEmail}
+                            className="space-y-4"
+                        >
                             <div className="flex flex-col md:flex-row gap-4">
                                 <input
                                     type="text"
+                                    name="first_name"
                                     placeholder="First Name"
                                     className="w-full bg-[#233554] text-slate-200 border border-slate-700 rounded-lg px-4 py-3 focus:outline-none focus:border-[#64ffda] transition-colors"
                                 />
                                 <input
                                     type="text"
+                                    name="last_name"
                                     placeholder="Last Name"
                                     className="w-full bg-[#233554] text-slate-200 border border-slate-700 rounded-lg px-4 py-3 focus:outline-none focus:border-[#64ffda] transition-colors"
                                 />
                             </div>
                             <input
+                                name="email"
                                 type="email"
                                 placeholder="Email"
                                 className="w-full bg-[#233554] text-slate-200 border border-slate-700 rounded-lg px-4 py-3 focus:outline-none focus:border-[#64ffda] transition-colors"
                             />
                             <input
+                                name="subject"
                                 type="text"
                                 placeholder="Subject"
                                 className="w-full bg-[#233554] text-slate-200 border border-slate-700 rounded-lg px-4 py-3 focus:outline-none focus:border-[#64ffda] transition-colors"
                             />
                             <textarea
+                                name="message"
                                 placeholder="Message"
                                 rows="5"
                                 className="w-full bg-[#233554] text-slate-200 border border-slate-700 rounded-lg px-4 py-3 focus:outline-none focus:border-[#64ffda] transition-colors resize-none"

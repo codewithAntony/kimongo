@@ -45,9 +45,14 @@ function Header() {
                             Hire Me
                         </button>
 
-                        <button className="bg-gradient-to-l from-[#249C82] via-[#44D2B0] to-[#5CF3CF] text-white font-semibold px-6 py-2 rounded-lg shadow-lg transition-all hover:scale-105 hover:shadow-xl">
+                        <a
+                            href="/Antony_Murithi_resume.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="bg-gradient-to-l from-[#249C82] via-[#44D2B0] to-[#5CF3CF] text-white font-semibold px-6 py-2 rounded-lg shadow-lg transition-all hover:scale-105 hover:shadow-xl"
+                        >
                             My Work
-                        </button>
+                        </a>
                     </div>
 
                     <div>

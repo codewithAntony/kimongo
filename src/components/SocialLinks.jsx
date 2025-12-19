@@ -4,10 +4,13 @@ import { FaXTwitter } from 'react-icons/fa6';
 
 function SocialLinks() {
     const socials = [
-        { icon: <FaFacebookF />, link: '/' },
-        { icon: <FaLinkedin />, link: '/' },
-        { icon: <FaXTwitter />, link: '/' },
-        { icon: <FaGithub />, link: '/' }
+        // { icon: <FaFacebookF />, link: '/' },
+        {
+            icon: <FaLinkedin />,
+            link: 'https://www.linkedin.com/in/antony-murithi-namu/'
+        },
+        { icon: <FaXTwitter />, link: 'https://x.com/kimong__o' },
+        { icon: <FaGithub />, link: ' https://github.com/codewithAntony' }
     ];
     return (
         <div className="flex gap-5 mt-10">

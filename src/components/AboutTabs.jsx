@@ -201,12 +201,12 @@ function AboutTabs() {
                             <p className="font-medium text-[#5CF3CF]">
                                 Phone Number:
                             </p>
-                            <p className="text-gray-400 ">07-25-010-898</p>
+                            <p className="text-gray-400 ">+254-725-010-898</p>
                         </div>
                         <div className="flex flex-col sm:flex-row sm:gap-2">
                             <p className="font-medium text-[#5CF3CF]">Mail:</p>
                             <a
-                                href="mailto:murithi3397@gmail.com"
+                                href="mailto:murithinamuu@gmail.com"
                                 onClick={handleEmailClick}
                                 className="text-gray-400  cursor-pointer"
                             >
@@ -219,6 +219,8 @@ function AboutTabs() {
                             </p>
                             <a
                                 href="https://github.com/codewithAntony"
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="text-gray-400  cursor-pointer"
                             >
                                 https://github.com/codewithAntony
@@ -229,7 +231,7 @@ function AboutTabs() {
                                 Resume:
                             </p>
                             <a
-                                href="/Antony_Namu_Resume.pdf"
+                                href="/Antony_Murithi_resume.pdf"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-gray-400  cursor-pointer"
@@ -243,6 +245,8 @@ function AboutTabs() {
                             </p>
                             <a
                                 href="https://www.linkedin.com/in/antony-murithi-namu/"
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="text-gray-400  cursor-pointer"
                             >
                                 https://www.linkedin.com/in/antony-murithi-namu/
