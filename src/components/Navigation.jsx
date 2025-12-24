@@ -4,7 +4,7 @@ const Navigation = () => {
     return (
         <div className="w-full fixed top-0 left-0 z-50 bg-[#09162A] shadow-md">
             <div className="mx-auto max-w-7xl flex justify-between items-center px-4 py-3 ">
-                <a href="home">
+                <a href="#home">
                     <h1 className="font-bold text-lg tracking-wide bg-gradient-to-l from-[#249C82] via-[#44D2B0] to-[#5CF3CF] bg-clip-text text-transparent">
                         Kimong'o
                     </h1>
