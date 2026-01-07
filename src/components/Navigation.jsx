@@ -26,9 +26,12 @@ const Navigation = () => {
                         </li>
                     ))}
                 </ul>
-                <button className="bg-gradient-to-l from-[#249C82] via-[#44D2B0] to-[#5CF3CF] text-white font-semibold px-6 py-2 rounded-lg shadow-lg transition-all hover:scale-105 hover:shadow-xl">
+                <a
+                    href="#contact"
+                    className="bg-gradient-to-l from-[#249C82] via-[#44D2B0] to-[#5CF3CF] text-white font-semibold px-6 py-2 rounded-lg shadow-lg transition-all hover:scale-105 hover:shadow-xl"
+                >
                     Let's chat
-                </button>
+                </a>
             </div>
         </div>
     );

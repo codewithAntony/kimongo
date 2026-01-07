@@ -117,12 +117,10 @@ const Contact = () => {
                             Skills
                         </h2>
 
-                        {/* Visual Orbit Rings - Adjusted sizes to match icon radii */}
-                        {/* Inner: 70px radius = 140px size */}
                         <div className="absolute border border-[#64ffda]/20 rounded-full w-[140px] h-[140px]"></div>
-                        {/* Middle: 120px radius = 240px size */}
+
                         <div className="absolute border border-[#64ffda]/20 rounded-full w-[240px] h-[240px]"></div>
-                        {/* Outer: 170px radius = 340px size */}
+
                         <div className="absolute border border-[#64ffda]/20 rounded-full w-[340px] h-[340px]"></div>
 
                         <TechIcons />
@@ -131,7 +129,9 @@ const Contact = () => {
             </div>
 
             <footer className="text-center text-slate-500 text-sm py-6 border-t border-slate-800 z-10">
-                <p>Copyright 2025 by Kimong'o || All Right Reserved.</p>
+                <p>
+                    © {new Date().getFullYear()} Kimong'o. All rights reserved.
+                </p>
             </footer>
         </div>
     );
@@ -139,7 +139,6 @@ const Contact = () => {
 
 const TechIcons = () => {
     const icons = [
-        // Inner Orbit (Radius 70px)
         {
             Icon: SiTypescript,
             color: '#3178c6',
@@ -155,7 +154,6 @@ const TechIcons = () => {
             delay: '-7s'
         },
 
-        // Middle Orbit (Radius 120px)
         {
             Icon: SiHtml5,
             color: '#e34f26',
@@ -178,7 +176,6 @@ const TechIcons = () => {
             delay: '-12s'
         },
 
-        // Outer Orbit (Radius 170px)
         {
             Icon: SiVuedotjs,
             color: '#4fc08d',

@@ -13,9 +13,12 @@ function GetInTouch() {
                         Have a Project On Your Mind?
                     </h2>
 
-                    <button className="bg-gradient-to-l from-[#249C82] via-[#44D2B0] to-[#5CF3CF] text-white font-semibold px-6 py-3 rounded-lg hover:opacity-90 transition">
+                    <a
+                        href="#contact"
+                        className="bg-gradient-to-l from-[#249C82] via-[#44D2B0] to-[#5CF3CF] text-white font-semibold px-6 py-3 rounded-lg hover:opacity-90 transition"
+                    >
                         Contact Me
-                    </button>
+                    </a>
                 </div>
 
                 <div className="absolute right-10 top-1/2 translate-y-1/2 hidden md:block">
