@@ -158,8 +158,8 @@ function AboutTabs() {
                                     tab.id === 'ABOUT ME'
                                         ? 'rounded-tl-md'
                                         : tab.id === 'MY VISION'
-                                        ? 'rounded-tr-md'
-                                        : ''
+                                          ? 'rounded-tr-md'
+                                          : ''
                                 }`}
                             >
                                 {tab.id}
@@ -231,7 +231,7 @@ function AboutTabs() {
                                 Resume:
                             </p>
                             <a
-                                href="/Antony_Murithi_resume.pdf"
+                                href="/Antony_Murithi-resume.pdf"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-gray-400  cursor-pointer"

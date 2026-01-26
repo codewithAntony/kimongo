@@ -4,9 +4,8 @@ const projects = [
     {
         id: 1,
         title: 'SiteCam',
-        // type: 'Web App',
         image: '/images/jengalog.png',
-        // liveLink: 'https://moticare.netlify.app/',
+        liveLink: 'https://github.com/codewithAntony/jengalog',
         sourceLink: 'https://github.com/codewithAntony/jengalog',
         tags: ['Next.js', 'Supabase'],
         description:
@@ -15,7 +14,6 @@ const projects = [
     {
         id: 2,
         title: 'Ngoma Zangu',
-        //type: 'Web App',
         image: '/images/ngomazanguss.png',
         liveLink: 'https://ngomazangu.netlify.app/',
         sourceLink: 'https://github.com/codewithAntony/ngomazangu',
@@ -26,7 +24,6 @@ const projects = [
     {
         id: 3,
         title: 'Moti Care Garage Service Management',
-        // type: 'Web App',
         image: '/images/auto-1.png',
         liveLink: 'https://moticare.netlify.app/',
         sourceLink: 'https://github.com/codewithAntony/moticaree',
@@ -37,7 +34,6 @@ const projects = [
     {
         id: 4,
         title: 'Fitclub Gym',
-        // type: 'Web Apps',
         image: '/images/fitclub.png',
         liveLink: 'https://fittclubb.netlify.app/',
         sourceLink: 'https://github.com/codewithAntony/gym-fitness-website',
@@ -48,7 +44,6 @@ const projects = [
     {
         id: 5,
         title: 'WordWonder',
-        // type: 'Web App',
         image: '/images/Wordwonder.png',
         liveLink: 'https://github.com/codewithAntony/wordwonder',
         sourceLink: 'https://github.com/codewithAntony/wordwonder',
@@ -59,7 +54,6 @@ const projects = [
     {
         id: 6,
         title: 'A Brand Kenya',
-        // type: 'Web App',
         image: '/images/abrandke.png',
         liveLink: 'https://abrandke.netlify.app/',
         sourceLink: 'https://github.com/codewithAntony/moticaree',
@@ -70,7 +64,6 @@ const projects = [
     {
         id: 7,
         title: 'Evergreen Dental Care',
-        // type: 'Web App',
         image: '/images/evergreen.png',
         liveLink: 'https://evergreendentalcareltd.netlify.app/',
         sourceLink: 'https://evergreendentalcareltd.netlify.app/',
@@ -109,9 +102,6 @@ const ProjectGallery = ({ project }) => {
                                             'https://via.placeholder.com/400x200?text=No+Image';
                                     }}
                                 />
-                                {/* <span className="absolute top-4 left-4 text-xs bg-black/40 px-2 py-1 rounded-full text-blue-400">
-                                    {project.type}
-                                </span> */}
                             </div>
 
                             <div className="p-6 flex flex-col flex-grow">
@@ -131,7 +121,6 @@ const ProjectGallery = ({ project }) => {
                                     {isExpanded ? 'Show Less' : 'Read More...'}
                                 </button>
 
-                                {/* Tech Tags */}
                                 <div className="flex flex-wrap gap-2 mb-6 mt-auto">
                                     {project.tags.map((tag) => (
                                         <span
@@ -159,7 +148,6 @@ const ProjectGallery = ({ project }) => {
                                         rel="noopener noreferrer"
                                         className="flex-1 flex items-center justify-center gap-2 bg-[#1c2128] border border-gray-700 hover:bg-gray-700 py-2 rounded text-sm transition-all duration-300"
                                     >
-                                        {/* GitHub Icon (Simplified) */}
                                         <svg
                                             className="w-4 h-4 fill-current"
                                             viewBox="0 0 24 24"
@@ -174,7 +162,6 @@ const ProjectGallery = ({ project }) => {
                     ))}
                 </div>
 
-                {/* View More Section */}
                 <div className="mt-12 text-center flex flex-col items-center">
                     <p className="text-gray-500 text-sm mb-4">
                         Showing {Math.min(visibleCount, totalProjects)} of{' '}
