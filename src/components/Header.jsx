@@ -29,7 +29,7 @@ function Header() {
                     </h1>
                     <h2 className="mt-4 text-2xl md:text-3xl font-bold text-gray-800">
                         a{' '}
-                        <span className="bg-gradient-to-l from-[#249C82] via-[#44D2B0] to-[#5CF3CF] bg-clip-text drop-shadow-smbg-clip-text text-transparent">
+                        <span className="bg-gradient-to-l from-[#249C82] via-[#44D2B0] to-[#5CF3CF] drop-shadow-sm bg-clip-text text-transparent">
                             {text}
                         </span>
                         <Cursor cursorColor="#22c55e" />
@@ -46,7 +46,7 @@ function Header() {
                         </button>
 
                         <a
-                            href="/Antony_Murithi_resume.pdf"
+                            href="/Antony_Murithi-resume.pdf"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="bg-gradient-to-l from-[#249C82] via-[#44D2B0] to-[#5CF3CF] text-white font-semibold px-6 py-2 rounded-lg shadow-lg transition-all hover:scale-105 hover:shadow-xl"
@@ -60,7 +60,6 @@ function Header() {
                     </div>
                 </motion.div>
 
-                {/* Image */}
                 <motion.div
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
@@ -70,7 +69,7 @@ function Header() {
                     <div className="relative">
                         <div className="absolute inset-0 rounded-full bg-gradient-to-r from-green-700 via-green-500 to-green-400 blur-3xl opacity-30"></div>
                         <img
-                            src="/pic1.svg"
+                            src="/images/pic1.svg"
                             alt="Tech Image"
                             className="relative w-72 h-72 md:w-96 md:h-96 object-cover rounded-full shadow-xl"
                         />
