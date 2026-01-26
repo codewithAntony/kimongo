@@ -81,8 +81,9 @@ const projects = [
     // ... add up to 12 projects here
 ];
 
-const ProjectGallery = () => {
+const ProjectGallery = ({ project }) => {
     const [visibleCount, setVisibleCount] = useState(6);
+    const [isExpanded, setIsExpanded] = useState(false);
     const totalProjects = projects.length;
 
     const showMore = () => {
@@ -92,18 +93,13 @@ const ProjectGallery = () => {
     return (
         <section className="bg-[#081427] text-white py-12 px-6">
             <div className="max-w-6xl mx-auto">
-                {/* Responsive Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {projects.slice(0, visibleCount).map((project) => (
                         <div
                             key={project.id}
                             className="bg-[#161b22] border border-gray-800 rounded-xl overflow-hidden flex flex-col"
                         >
-                            {/* Image/Icon Header Area */}
                             <div className="h-48 bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center relative">
-                                <span className="absolute top-4 left-4 text-xs bg-black/40 px-2 py-1 rounded-full text-blue-400">
-                                    {project.type}
-                                </span>
                                 <img
                                     src={project.image}
                                     alt={project.title}
@@ -113,19 +109,30 @@ const ProjectGallery = () => {
                                             'https://via.placeholder.com/400x200?text=No+Image';
                                     }}
                                 />
+                                {/* <span className="absolute top-4 left-4 text-xs bg-black/40 px-2 py-1 rounded-full text-blue-400">
+                                    {project.type}
+                                </span> */}
                             </div>
 
-                            {/* Content Area */}
                             <div className="p-6 flex flex-col flex-grow">
                                 <h3 className="text-xl font-bold mb-2">
                                     {project.title}
                                 </h3>
-                                <p className="text-gray-400 text-sm mb-4 flex-grow line-clamp-2">
+                                <p
+                                    className={`text-gray-400 text-sm mb-4 transition-all duration-300 ${isExpanded ? '' : 'line-clamp-2'}`}
+                                >
                                     {project.description}
                                 </p>
 
+                                <button
+                                    onClick={() => setIsExpanded(!isExpanded)}
+                                    className="text-[#44D2B0] text-xs font-semibold mb-4 text-left hover:underline w-fit"
+                                >
+                                    {isExpanded ? 'Show Less' : 'Read More...'}
+                                </button>
+
                                 {/* Tech Tags */}
-                                <div className="flex flex-wrap gap-2 mb-6">
+                                <div className="flex flex-wrap gap-2 mb-6 mt-auto">
                                     {project.tags.map((tag) => (
                                         <span
                                             key={tag}
@@ -136,7 +143,6 @@ const ProjectGallery = () => {
                                     ))}
                                 </div>
 
-                                {/* Buttons */}
                                 <div className="flex gap-3">
                                     <a
                                         href={project.liveLink}
